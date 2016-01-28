@@ -1,0 +1,21 @@
+<ion-view view-title="Leave Application">
+  <ion-content class="padding">
+	<h2>Leave Application</h2>
+	<div class="row">
+		<div class="col"><button ng-click="datepick('start')" class="button button-block button-assertive">{{startDate}}</button></div>
+		<div class="col"><button ng-click="datepick('end')" class="button button-block button-assertive">{{endDate}}</button></div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<label class="item item-input" >
+				<textarea placeholder="Reason" rows="10"></textarea>
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="col"><button class="button button-block button-assertive">Submit</button></div>
+		</div>
+	</div>
+</ion-content>
+</ion-view>

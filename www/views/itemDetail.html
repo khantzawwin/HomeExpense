@@ -1,0 +1,27 @@
+<ion-view view-title="Attendance">
+    <ion-content class="padding">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Item Name</span>
+                <input type="text" ng-model="itemDetails.itemName">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Category</span>
+                <input type="text" ng-model="itemDetails.category">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Unit Price</span>
+                <input type="number" ng-model="itemDetails.price">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Quantity</span>
+                <input type="number" ng-model="itemDetails.quantity">
+            </label>
+        </div>
+    </ion-content>
+     <ion-footer-bar class="bar-light"> 
+        <button class="button button-block button-positive" style="margin-top: -10px" ng-click="addItem()">
+        Add 
+        </button>
+    </ion-footer-bar>
+</ion-view>

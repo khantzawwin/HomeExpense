@@ -1,0 +1,53 @@
+<ion-view view-title="Expense"  cache-view="false">
+  <ion-content class="padding">
+    <div class="row">
+        <div class="col">
+            <button ng-click="datepick('start')" class="button button-block button-assertive">{{startDate}}</button>
+        </div>
+    </div>
+    <ion-list>
+      <!--<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">-->
+      <!--<ion-item type="item-text-wrap">
+        <p>Item 1</p>
+
+      </ion-item>
+      <ion-item type="item-text-wrap">
+        <p>Item 2</p>
+
+      </ion-item>-->
+      <ion-item class="item-remove-animate list-inset" ng-repeat="item in items track by $index" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        
+        {{item.itemName}}
+        <span class="item-note">
+            {{item.price}} SGD x {{item.quantity}} = {{item.totalprice}}
+        </span>
+        
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+      <ion-item class="item-remove-animate list-inset"  type="item-text-wrap" >
+        
+        Grand Total
+        <span class="item-note">
+            {{grandTotal}} SGD
+        </span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar class="bar-light">
+        <div class="row">
+            <div class="col">
+                <button class="button button-block button-positive" style="margin-top: -10px">
+                Submit 
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-positive" style="margin-top: -10px" ng-click="addItem()">
+                Add Item 
+                </button>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>
